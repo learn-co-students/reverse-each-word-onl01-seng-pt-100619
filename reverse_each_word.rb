@@ -1,36 +1,26 @@
-def reverse_each_word(sentence)
-  split_array = sentence.split
+
+  #1. make string an array
+
+def reverse_each_word(string)
+ main_array = string.split(" ")
+ 
+ #add a variable that will return this new reversed sentence
   reversed_array = []
   
-  sentence.each do |i|
-    reversed_array.unshift
-  # reversed_array = split_array.reverse
-  #   split_array.each {|i| i.reverse}
-  #   reversed_array.join
+  #iterate over the string and .reverse
+  #shovel this into our new method
+  main_array.each do |string|
+    reversed_array << string.reverse
+  end
+  #return our new method and join our array with spaces
+  reversed_array.join(" ")
 end
+
+def reverse_each_word(string)
+ main_array = string.split(" ")
+  reversed_array = []
+  main_array.collect do|string|
+    reversed_array << string.reverse
+  end
+  reversed_array.join(" ")
 end
-
-
-#1. we split it
-#2. we reverse the split
-#3. we reverse the individual words in the split.
-
-
-# This works. Using a regex for spliting in Any word boundary character
-
-# def reverse_string str
-#   arr = str.split /\b/
-#   new_arr = arr.collect {|a| a.reverse}
-#   new_arr.join
-# end
-
-# def reverse(string)
-# string = string.split('')
-# reversed_string = []
- 
-# string.each do |char|
-#   reversed_string.unshift(char)
-# end
- 
-# return reversed_string.join('')
-# end
